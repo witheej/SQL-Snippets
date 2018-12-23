@@ -46,9 +46,9 @@ drop index IX_MyTable_Name on dbo.MyTable
 ## Renaming
 ```sql
 exec sp_rename 'dbo.MyTable', 'MyNewTable'
-exec sp_rename 'dbo.MyNewTable.OldName' , 'NewName', 'column'
+exec sp_rename 'dbo.MyNewTable.ExistingColumnName' , 'NewNameForColumn', 'column'
 exec sp_rename 'dbo.FK_MyNewTable_User', 'FK_MyNewTable_CreatorUser', 'object'
-exec sp_rename 'dbo.MyNEwTable.IX_MyTable_IndexName', 'IX_MyNewTable_IndexName', 'index'
+exec sp_rename 'dbo.MyNewTable.IX_MyTable_IndexName', 'IX_MyNewTable_IndexName', 'index'
 ```
 
 ## Change Schema
